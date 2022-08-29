@@ -11,24 +11,17 @@ Set up
     >> startup 
 (4) generate the UCI dataset as follows:
 
-- Download the original datasets tested in the paper from UCI data repository (or download the UCI dataset in LIBSVM
-    format at https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/regression.html);
-- Put them into the folder [\genUCIdatafun\UCIdataorg];
-- Run genUCIdata.m (For demonstration purpose, "mpg_scale.txt" and "log1p.E2006.test" are left in the folder
-    [\genUCIdatafun\UCIdataorg]).
+   - Download the original datasets tested in the paper from UCI data repository (or download the UCI dataset in LIBSVM
+     format at https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/regression.html);
+   - Put them into the folder [\genUCIdatafun\UCIdataorg];
+   - Run genUCIdata.m (For demonstration purpose, "mpg_scale.txt" is left in the folder
+     [\genUCIdatafun\UCIdataorg]).
 
 
 By now, k-normCode is ready for you to use.
 Notice: Run all the files are provided for only demonstration purpose.
-
-Remark 
-The UCI dataset is not included in the package. Please generate the UCI dataset as follows:
-(1) Download the original datasets tested in the paper from UCI data repository (or download the UCI dataset in LIBSVM
-    format at https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/regression.html);
-(2) Put them into the folder [\genUCIdatafun\UCIdataorg];
-(3) Run genUCIdata.m (For demonstration purpose, "mpg_scale.txt" and "log1p.E2006.test" are left in the folder
-    [\genUCIdatafun\UCIdataorg]).
-
+  
+    
 Contents:
 ===============================================================================================================================
 Test1_Risk-averse_model: Comparison of the risk-sensitive and risk-neutral regression models
