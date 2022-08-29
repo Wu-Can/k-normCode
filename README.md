@@ -19,6 +19,8 @@ Set up
 - Put them into the folder [\genUCIdatafun\UCIdataorg];
 - Run genUCIdata.m (For demonstration purpose, "mpg_scale.txt" is left in the folder
     [\genUCIdatafun\UCIdataorg]).
+    
+(5) Download the latest version 9.5.2 of the Gurobi optimizer from https://www.gurobi.com/downloads/gurobi-software/.
 
 By now, k-normCode is ready for you to use. Notice: Run all the files are provided for only demonstration purpose.
 
