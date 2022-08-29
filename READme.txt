@@ -10,13 +10,12 @@ Set up
 (3) In the Matlab command window, type: 
     >> startup 
 (4) generate the UCI dataset as follows:
-
    - Download the original datasets tested in the paper from UCI data repository (or download the UCI dataset in LIBSVM
      format at https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/regression.html);
    - Put them into the folder [\genUCIdatafun\UCIdataorg];
    - Run genUCIdata.m (For demonstration purpose, "mpg_scale.txt" is left in the folder
      [\genUCIdatafun\UCIdataorg]).
-
+ (5) Download the latest version 9.5.2 of the Gurobi optimizer from https://www.gurobi.com/downloads/gurobi-software/.
 
 By now, k-normCode is ready for you to use.
 Notice: Run all the files are provided for only demonstration purpose.
