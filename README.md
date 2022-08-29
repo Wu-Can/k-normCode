@@ -3,7 +3,7 @@ A MATLAB software package for solving the convex and nonconvex risk-based  linea
 
 Authors: Can Wu, Ying Cui, Donghui Li, Defeng Sun. 
 
-Set up
+## Set up
 
 (1) Unpack the software
 
@@ -24,7 +24,7 @@ Set up
 
 By now, k-normCode is ready for you to use. Notice: Run all the files are provided for only demonstration purpose.
 
-Contents:
+## Contents
 
 (1) Test1_Risk-averse_model: Comparison of the risk-sensitive and risk-neutral regression models
 
