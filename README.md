@@ -17,7 +17,7 @@ Set up
 -  Download the original datasets tested in the paper from UCI data repository (or download the UCI dataset in LIBSVM
     format at https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/regression.html);   
 - Put them into the folder [\genUCIdatafun\UCIdataorg];
-- Run genUCIdata.m (For demonstration purpose, "mpg_scale.txt" and "log1p.E2006.test" are left in the folder
+- Run genUCIdata.m (For demonstration purpose, "mpg_scale.txt" is left in the folder
     [\genUCIdatafun\UCIdataorg]).
 
 By now, k-normCode is ready for you to use. Notice: Run all the files are provided for only demonstration purpose.
