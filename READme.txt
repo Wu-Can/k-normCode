@@ -5,8 +5,8 @@ A MATLAB software package for solving the convex and nonconvex risk-based
 linear regression at scale
 
 Set up
-(1) Unpack the software
-(2) Run Matlab in the directory knormCode
+(1) Unpack the software.
+(2) Run Matlab in the directory knormCode.
 (3) In the Matlab command window, type: 
     >> startup 
 (4) generate the UCI dataset as follows:
@@ -52,7 +52,7 @@ Test3_Solution_path: Solvers to generate the whole solution path of the convex C
 (c1) Test_NALM_path_UCI: N-ALM for the computation of a solution path with UCI data; 
 (c2) Test_NALM_path_random: N-ALM for the computation of a solution path with random data;
 (d1) Test_path_figure_random: Generate figures for solution paths on random data;
-(d2) Test_path_figure_UCI: Generate figures for solution paths on UCI data;
+(d2) Test_path_figure_UCI: Generate figures for solution paths on UCI data.
 ===============================================================================================================================
 
 ===============================================================================================================================
@@ -61,7 +61,7 @@ Test4_truncated_CVaR_MM: Solvers for the nonconvex truncated CVaR-based sparse l
 (a1) Test_MM_NPPA_UCI: MM+N-PPA for the nonconvex truncated CVaR-based model with UCI data; 
 (a2) Test_MM_NPPA_random: MM+N-PPA for the nonconvex truncated CVaR-based model with random data; 
 (b1) Test_MM_Gurobi_UCI: MM+Gurobi for the nonconvex truncated CVaR-based model with UCI data; 
-(b2) Test_MM_Gurobi_random: MM+Gurobi for the nonconvex truncated CVaR-based model with random data; 
+(b2) Test_MM_Gurobi_random: MM+Gurobi for the nonconvex truncated CVaR-based model with random data. 
 ===============================================================================================================================
 
 ===============================================================================================================================
