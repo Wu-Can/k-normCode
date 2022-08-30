@@ -32,22 +32,22 @@ for i = 1:lenp
     
     if flag_nnz == 1
         eval(['load new_Result_AS_NALM_path_nnz_',num2str(m),'_',num2str(n),'_',num2str(esgp)]);
-        nnzx_new = new_Ave_Result_xnnz_path;
-        clear new_Ave_Result_xnnz_path;
+        nnzx_new = result_xnnz_path;
+        clear result_xnnz_path;
         eval(['load new_Result_AS_NALM_path_n_mean_',num2str(m),'_',num2str(n),'_',num2str(esgp)]);
-        mean_n_new =  new_Ave_Result_n_mean;
-        clear new_Ave_Result_n_mean;
+        mean_n_new =  result_n_mean;
+        clear result_n_mean;
     end
     if flag_time == 1
         eval(['load new_Result_AS_NALM_path_time_',num2str(m),'_',num2str(n),'_',num2str(esgp)]);
-        time_AS_NALM_new = new_Ave_Result_time_path./time_ed;
-        clear new_Ave_Result_time_path;
+        time_AS_NALM_new = result_time_path./time_ed;
+        clear result_time_path;
         eval(['load new_Result_warm_NALM_',num2str(m),'_',num2str(n),'_',num2str(esgp)]);
-        time_warm_SNIPAL_new = new_Ave_Result_warm_SNIPAL_time_path./time_ed;
-        clear new_Ave_Result_warm_time_path;
+        time_warm_SNIPAL_new = result_ttime_path./time_ed;
+        clear result_ttime_path;
         eval(['load new_Result_NALM_path_time_',num2str(m),'_',num2str(n),'_',num2str(esgp)]);
-        time_SNIPAL_new = new_Ave_Result_ttime_path./time_ed;
-        clear new_Ave_Result_ttime_path;
+        time_SNIPAL_new = result_ttime_path./time_ed;
+        clear result_ttime_path;
     end
     
     [lenalp,lenlam] = size(lambda_vec);
