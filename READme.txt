@@ -85,27 +85,3 @@ with UCI data, please perform the following steps:
 (2) Open and run the file "Test_path_figure_UCI.m" in the folder "Result_solution_path_figure_UCI";
 (3) The figure "Time_comparison_9_4_2.fig" will be generated.
 ===============================================================================================================================
-         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-===============================================================================================================================
-
-
-
-
-
-
-    
