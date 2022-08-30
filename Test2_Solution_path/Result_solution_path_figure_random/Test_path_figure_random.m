@@ -28,22 +28,22 @@ for i = 1:lenp
     
     if flag_nnz == 1
         eval(['load new_Result_AS_NALM_path_nnz_',num2str(m),'_',num2str(n),'_',num2str(esgp)]);
-        nnzx_new = new_Ave_Result_xnnz_path;
-        clear new_Ave_Result_xnnz_path;
+        nnzx_new = result_xnnz_path;
+        clear result_xnnz_path;
         eval(['load new_Result_AS_NALM_path_n_mean_',num2str(m),'_',num2str(n),'_',num2str(esgp)]);
-        mean_n_new =  new_Ave_Result_n_mean;
-        clear new_Ave_Result_n_mean;
+        mean_n_new =  result_n_mean;
+        clear result_n_mean;
     end
     if flag_time == 1
         eval(['load new_Result_AS_NALM_path_time_',num2str(m),'_',num2str(n),'_',num2str(esgp)]);
-        time_AS_NALM_new = new_Ave_Result_time_path;
-        clear new_Ave_Result_time_path;
+        time_AS_NALM_new = result_time_path;
+        clear result_time_path;
         eval(['load new_Result_warm_NALM_time_',num2str(m),'_',num2str(n),'_',num2str(esgp)]);
-        time_warm_NALM_new = new_Ave_Result_warm_NALM_time_path;
-        clear new_Ave_Result_warm_time_path;
+        time_warm_NALM_new = result_ttime_path;
+        clear result_ttime_path;
         eval(['load new_Result_NALM_path_time_',num2str(m),'_',num2str(n),'_',num2str(esgp)]);
-        time_NALM_new = new_Ave_Result_ttime_path;
-        clear new_Ave_Result_ttime_path;
+        time_NALM_new = result_ttime_path;
+        clear result_ttime_path;
     end
     
     if p == 1
