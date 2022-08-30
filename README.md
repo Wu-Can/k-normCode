@@ -3,7 +3,7 @@ A MATLAB software package for solving the convex and nonconvex risk-based  linea
 
 Authors: Can Wu, Ying Cui, Donghui Li, Defeng Sun. 
 
-## Set up
+## Settings
 
 (1) Unpack the software
 
@@ -74,13 +74,13 @@ By now, k-normCode is ready for you to use. Notice: Run all the files are provid
 
 ## Examples
 
-- Example 1: If you want to test the performance of the N-ALM for solving the convex CVaR-based models under a fixed lambda with 
+(1) Example 1: If you want to test the performance of the N-ALM for solving the convex CVaR-based models under a fixed lambda with 
 UCI data, please perform the following steps:
  - Open the file "Test_NALM_UCI.m" in the folder "Test1_fixed_lambda";
  - Input the values of prob and flag_tol, and then run the file "Test_NALM_UCI.m" in its directory;
  - The final result can be found in the workspace.
 
-- Example 2: If you want to generate a figure of the cumulative time comparison by the AS+N-ALM, the Warm+N-ALM and the N-ALM 
+(2) Example 2: If you want to generate a figure of the cumulative time comparison by the AS+N-ALM, the Warm+N-ALM and the N-ALM 
 with UCI data, please perform the following steps:
   - In th folder "Test2_Solution_path", open and run the files "Test_AS_NALM_path_UCI.m", "Test_NALM_path_UCI.m" and 
    "Test_warm_NALM_path_UCI.m" in sequence;
