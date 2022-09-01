@@ -23,7 +23,7 @@ Authors: Can Wu, Ying Cui, Donghui Li, Defeng Sun.
 - Run genUCIdata.m (For demonstration purpose, "mpg_scale.txt" and "housing_scale.txt" are left in the folder
     [\genUCIdatafun\UCIdataorg]).
     
-(5) Download the latest version 9.5.2 of the Gurobi optimizer from https://www.gurobi.com/downloads/gurobi-software/.
+(5) Download the version 9.5.2 of the Gurobi optimizer from https://www.gurobi.com/downloads/gurobi-software/.
 
 (6) Download the version 3.2 of the PSG program from http://www.aorda.com/index.php/downloading/.
 
