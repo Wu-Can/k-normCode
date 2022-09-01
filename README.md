@@ -33,7 +33,7 @@ By now, k-normCode is ready for you to use. Notice: Run all the files are provid
 
 ## Contents
 
-(1) Test1_fixed_lambda: Solvers for the convex CVaR-based sparse linear regression with a fixed lambda: N-ALM, ADMM, Gurobi, S-IRPN
+(1) Test1_fixed_lambda: Solvers for the convex CVaR-based sparse linear regression with a fixed lambda: N-ALM, ADMM, Gurobi, S-IRPN, PAG solvers
 
 - Test_NALM_UCI: N-ALM for the convex CVaR-based models with UCI data; 
 - Test_NALM_random: N-ALM for the convex CVaR-based models with random data; 
