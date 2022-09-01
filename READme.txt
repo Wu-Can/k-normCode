@@ -17,7 +17,8 @@ SETTINGS:
    - Put them into the folder [\genUCIdatafun\UCIdataorg];
    - Run genUCIdata.m (For demonstration purpose, "mpg_scale.txt" and "housing_scale.txt" are left in the folder
      [\genUCIdatafun\UCIdataorg]).
-(5) Download the latest version 9.5.2 of the Gurobi optimizer from https://www.gurobi.com/downloads/gurobi-software/.
+(5) Download the version 9.5.2 of the Gurobi optimizer from https://www.gurobi.com/downloads/gurobi-software/.
+(6) Download the version 3.2 of the PSG program from http://www.aorda.com/index.php/downloading/.
 
 By now, k-normCode is ready for you to use.
 Notice: Run all the files are provided for only demonstration purpose.
@@ -27,6 +28,7 @@ Notice: Run all the files are provided for only demonstration purpose.
 CONTENTS:
 
 (1) Test1_fixed_lambda: Solvers for the convex CVaR-based sparse linear regression with a fixed lambda: N-ALM, ADMM, Gurobi, S-IRPN
+PSG solvers
     (a1) Test_NALM_UCI: N-ALM for the convex CVaR-based models with UCI data; 
     (a2) Test_NALM_random: N-ALM for the convex CVaR-based models with random data; 
     (b1) Test_ADMM_UCI: ADMM for the convex CVaR-based models with UCI data; 
@@ -34,7 +36,9 @@ CONTENTS:
     (c1) Test_Barrier_Gurobi_UCI: Barrier method in Gurobi for the convex CVaR-based models with UCI data; 
     (c2) Test_Barrier_Gurobi_random: Barrier method in Gurobi for the convex CVaR-based models with random data; 
     (d1) Test_SIRPN_UCI: S-IRPN for the convex CVaR-based models with UCI data; 
-    (d2) Test_SIRPN_random: S-IRPN for the convex CVaR-based models with random data.
+    (d2) Test_SIRPN_random: S-IRPN for the convex CVaR-based models with random data;
+    (e1) Test_PSG_UCI: PSG solvers for the convex CVaR-based models with UCI data;
+    (e2) Test_PSG_random: PSG solvers for the convex CVaR-based models with random data.
 
 (2) Test2_Solution_path: Solvers to generate the whole solution path of the convex CVaR-based models: AS+N-ALM, Warm+N-ALM, N-ALM
     (a1) Test_AS_NALM_path_UCI: AS+N-ALM for the computation of a solution path with UCI data; 
