@@ -25,6 +25,8 @@ Authors: Can Wu, Ying Cui, Donghui Li, Defeng Sun.
     
 (5) Download the latest version 9.5.2 of the Gurobi optimizer from https://www.gurobi.com/downloads/gurobi-software/.
 
+(6) Download the version 3.2 of the PSG program from http://www.aorda.com/index.php/downloading/.
+
 By now, k-normCode is ready for you to use. Notice: Run all the files are provided for only demonstration purpose.
 
 
@@ -40,7 +42,9 @@ By now, k-normCode is ready for you to use. Notice: Run all the files are provid
 - Test_Barrier_Gurobi_UCI: Barrier method in Gurobi for the convex CVaR-based models with UCI data; 
 - Test_Barrier_Gurobi_random: Barrier method in Gurobi for the convex CVaR-based models with random data; 
 - Test_SIRPN_UCI: S-IRPN for the convex CVaR-based models with UCI data; 
-- Test_SIRPN_random: S-IRPN for the convex CVaR-based models with random data.
+- Test_SIRPN_random: S-IRPN for the convex CVaR-based models with random data;
+- Test_PSG_UCI: PSG solvers for the convex CVaR-based models with UCI data;
+- Test_PSG_random: PSG solvers for the convex CVaR-based models with random data.
 
 (2) Test2_Solution_path: Solvers to generate the whole solution path of the convex CVaR-based models: AS+N-ALM, Warm+N-ALM, N-ALM
 
