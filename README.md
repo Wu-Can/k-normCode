@@ -23,9 +23,9 @@ Authors: Can Wu, Ying Cui, Donghui Li, Defeng Sun.
 - Run genUCIdata.m (For demonstration purpose, "mpg_scale.txt" and "housing_scale.txt" are left in the folder
     [\genUCIdatafun\UCIdataorg]).
     
-(5) Download the version 9.5.2 of the Gurobi optimizer from https://www.gurobi.com/downloads/gurobi-software/.
+(5) Download and install the version 9.5.2 of the Gurobi optimizer from https://www.gurobi.com/downloads/gurobi-software/.
 
-(6) Download the version 3.2 of the PSG program from http://www.aorda.com/index.php/downloading/.
+(6) Download and install the version 3.2 of the PSG program from http://www.aorda.com/index.php/downloading/.
 
 By now, k-normCode is ready for you to use. Notice: Run all the files are provided for only demonstration purpose.
 
