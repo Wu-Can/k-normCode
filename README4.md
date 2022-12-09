@@ -31,12 +31,11 @@ Below is the BibTex for citing this version of the code.
 ## Description
 
 The goal of this software is to solve high-dimensional sparse linear regression problems 
-under either the VaR or the CVaR risk measures. Please see the paper for details.
-
-The software is written in MATLAB and compares with the publically available [Gurobi optimizer](https://www.gurobi.com/downloads/gurobi-software/), and the [PSG program](http://www.aorda.com/index.php/downloading/).  For all of them,
+under either the VaR or the CVaR risk measures. it is written in MATLAB and compares with the publically available [Gurobi optimizer](https://www.gurobi.com/downloads/gurobi-software/) and the [PSG program](http://www.aorda.com/index.php/downloading/).  For all of them,
 free academic licenses are available.
 
-This software contains three kinds of optimization problems and the corresponding solvers:
+####  Three kinds of optimization problems and the corresponding solvers
+
 - CVaR regression with a fixed lambda: the convex CVaR-based sparse linear regression with a fixed value of lambda.
   - **N-ALM**: the semismooth Newton based on the proximal augmented Lagrangian method
   - **ADMM**: the alternating direction method of multipliers 
@@ -51,11 +50,15 @@ This software contains three kinds of optimization problems and the correspondin
   - **MM+N-PPA**: the majorization-minimization algorithm combined with the semismooth Newton method based on the proximal point algorithm
   - **MM+Gurobi**: the majorization-minimization algorithm combined with the barrier method in Gurobi
 
-Two kinds of data sets are used in this software:
-- UCI data: 
-- Random data: 
+#### Two kinds of data set
 
-This software contains nine folders:
+- UCI data: the real data from the publically available [UCI data repository](
+https://archive.ics.uci.edu/ml/index.php).
+- Random data: generated randomly under three different heavy-tailed
+errors according to Table 1 or three different contamination schemes in Table 3 in the supplementary materials.
+
+#### Ten folders in the software
+
 - `Test1_fixed_lambda`: test the performance of **N-ALM**, **ADMM**, **Gurobi**, **S-IRPN** and **PSG solvers** for CVaR regression with a fixed lambda.
 - `Test2_Solution_path`: test the performance of **AS+N-ALM**, **Warm+N-ALM** and **N-ALM** for CVaR regression with a sequence of lambda.
 - `Test3_truncated_CVaR_MM`: test the performance of **MM+N-PPA** and **MM+Gurobi** for truncated CVaR regression.
@@ -65,6 +68,7 @@ This software contains nine folders:
 - `mexfun`: two funtions in MEX format.
 - `solver`: all the subfunctions called by the above main functions.
 - `UCIdata`: all availiable data for the UCI data and the high-accurate objective values.
+- `Example`: the running diaries and final results of the **N-ALM** and **Gurobi** for solving the CVaR regression with a fixed lambda on UCI data with epsilon=1e-8.
 
 
 ## Usage
