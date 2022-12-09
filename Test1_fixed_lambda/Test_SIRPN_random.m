@@ -10,7 +10,7 @@ datadir = [filepath,filesep,'UCIdata'];
 addpath(genpath(datadir));
 %%
 %profile on
-%================== Input ================== 
+%================== INPUT ================== 
 Prob = 1;%[1:7];
 %===========================================
 
