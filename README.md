@@ -50,7 +50,7 @@ free academic licenses are available.
   - **MM+N-PPA**: the majorization-minimization algorithm combined with the semismooth Newton method based on the proximal point algorithm
   - **MM+Gurobi**: the majorization-minimization algorithm combined with the barrier method in Gurobi
 
-#### Two kinds of data set
+#### Two kinds of datasets
 
 - UCI data: the real data from the publically available [UCI data repository](
 https://archive.ics.uci.edu/ml/index.php). Remarkably, all UCI datasets in LIBSVM format except for the four large-scale datasets are already in the folder `\genUCIdatafun\UCIdataorg`.
