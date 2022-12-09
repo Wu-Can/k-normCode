@@ -298,6 +298,11 @@ During the above two operations, you will see the information for each iteration
 - To replicate all the results on UCI data in the paper, modify and run the scripts in the corresponding folders `Test1_fixed_lambda`, `Test2_Solution_path` and `Test3_truncated_CVaR_MM` according to ***Step 4***, respectively. 
 - To replicate all the results on random data in the supplementary materials, modify and run the scripts in the corresponding folders `Test1_fixed_lambda`, `Test2_Solution_path`,  `Test3_truncated_CVaR_MM` and `Test4_Risk-averse_model` according to ***Step 5***, respectively. 
   
+	
+## Ongoing Development
+
+This code is being developed on an on-going basis at the author's
+[Github site](https://github.com/Wu-Can/k-normCode).
 
 
 
