@@ -271,15 +271,30 @@ https://archive.ics.uci.edu/ml/index.php) or in its [LIBSVM
 	        <td><i>Test_MM_Gurobi_random</td>
 	
 </table>
-***Example***. To
+
+	
+## Example
+If you want to see the performance of the **N-ALM** and **Gurobi** on UCI data with epsilon=1e-8 in Table 4 of the paper, you only need to execute the following two operations in `Test1_fixed_lambda` according to ***Step 4***:
+- Modify the INPUT part of the script *Test_NALM_UCI.m* to
+	
+  ```
+    prob=[1:11]; flag_tol=0; tol=1e-8; alpha_vec=[0.9, 0.5, 0.1];
+  ```
+	then run this script.
+- Modify the INPUT part of the script *Test_Barrier_Gurobi_UCI.m* to	
+	
+  ```
+    prob=[1:11]; 
+  ```
+	then run this script.
+	
+During the above two operations, you will see the information for each iteration of the **N-ALM** and **Gurobi** in the current command window (see Diary_NALM_UCI_flagtol_0_tol_1e-08.txt and Diary_Barrier_Gurobi_UCI.txt in `Example` folder), respectively. Finally, you will obtain the files Result_NALM_UCI_flagtol_0_tol_1e-08.mat and Result_Gurobi_UCI.mat in the current folder, which include all the information required in Table 4.
 	
 
-
 ## Replicating
-
-- To replicate the results in Tables 2-4, run scripts in the folder `Test1_fixed_lambda`, respectively.
-- To replicate the results in Figures 1-2 and Tables 5, run scripts in the folder `Test2_Solution_path`, respectively.
-- To replicate the results in Table 6, run scripts in the folder `Test3_truncated_CVaR_MM`, respectively.   
+- To replicate all the results in the paper, modify and run the scripts in the corresponding folders `Test1_fixed_lambda`, `Test2_Solution_path` and `Test3_truncated_CVaR_MM` according to ***Step 4***, respectively. 
+- To replicate all the results in the supplementary materials, modify and run the scripts in the corresponding folders `Test1_fixed_lambda`, `Test2_Solution_path`,  `Test3_truncated_CVaR_MM` and `Test4_Risk-averse_model` according to ***Step 5***, respectively. 
+  
 
 
 
