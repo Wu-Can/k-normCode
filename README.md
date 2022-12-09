@@ -34,7 +34,7 @@ The goal of this software is to solve high-dimensional sparse linear regression 
 under either the VaR or the CVaR risk measures. it is written in MATLAB and compares with the publically available [Gurobi optimizer](https://www.gurobi.com/downloads/gurobi-software/) and the [PSG program](http://www.aorda.com/index.php/downloading/).  For all of them,
 free academic licenses are available.
 
-####  Three kinds of optimization problems and the corresponding solvers
+####  Three types of optimization problems and the corresponding solvers
 
 - CVaR regression with a fixed lambda: the convex CVaR-based sparse linear regression with a fixed value of lambda.
   - **N-ALM**: the semismooth Newton based on the proximal augmented Lagrangian method
