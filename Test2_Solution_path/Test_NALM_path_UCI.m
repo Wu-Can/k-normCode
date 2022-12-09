@@ -13,7 +13,7 @@ if ~exist(pathname,'dir'),mkdir(pathname); end
 addpath(genpath(pathname));
 %%
 %profile on
-%========= Input =========
+%========= INPUT =========
 prob = [9 4 2];
 %=========================
 %% -------------------------input A and b------------------------
