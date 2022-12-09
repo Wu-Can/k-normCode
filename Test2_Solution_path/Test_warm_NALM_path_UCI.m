@@ -5,9 +5,9 @@ clear all; clc;
 rng('default');
 %%
 %profile on
-%======== Input ======== 
+%======== INPUT ======== 
 prob = [9 4 2];
-%======================
+%=======================
 %% -------------------------input A and b------------------------
 HOME = pwd;
 addpath(genpath(HOME));
