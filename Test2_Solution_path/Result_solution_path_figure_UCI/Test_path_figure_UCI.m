@@ -7,7 +7,7 @@
 %%          = 0, does not generate the figure "Selected active features in the AS".
 %% =====================================================================================
 clc;clear
-%========= Input =========
+%========= INPUT =========
 flag_time = 1;
 flag_nnz = 1;
 %=========================
