@@ -5,7 +5,7 @@ clear all; clc;
 rng('default');
 %%
 %profile on
-%======== Input ========
+%======== INPUT ========
 prob = [1:11];
 %=======================
 
