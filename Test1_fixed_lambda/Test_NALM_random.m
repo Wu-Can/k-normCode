@@ -1,24 +1,27 @@
-%%==================================================================================================
+%%==============================================================================================
 %% Test the N-ALM for the convex CVaR-based models with random data
 %% Input:
 %% prob = the order number of problems;
 %% flag_tol = 0, adopt eta_res < tol as the stopping criterion of the N-ALM;                         
 %%          = 1, adopt  relobj < tol as the stopping criterion of the N-ALM;
 %%          = 2, adopt  relkkt < tol as the stopping criterion of the N-ALM.
-%% tol = the tolerance of the N-ALM.
-%% alpha_vec = the vector of the confident level alpha satisfying k:=ceil((1-alpha)*m)
-%%=================================================================================================
+%% tol = the tolerance of the N-ALM. 
+%% alpha_vec = the vector of the confidence level alpha such that k:=ceil((1-alpha)*m)
+%% flag_J = 1, test the influence of the parameter k on the cardinality s of
+%%             the index set J 
+%%==============================================================================================
 clear all; clc;
 rng('default');
 HOME = pwd;
 addpath(genpath(HOME));
 %%
 %profile on
-%================================== INPUT =================================
-Prob = [5:7];
-flag_tol = 1;
-tol = 1e-3;
-alpha_vec = [0.9, 0.5, 0.1];
+%================================== Input =================================
+Prob = 1;%[5:7];
+flag_tol = 0;
+tol = 1e-6; 
+alpha_vec = [0.4:-0.1:0.1];%[0.9;0.5;0.1]; 
+flag_J = 1;
 %==========================================================================
 if (flag_tol ~= 0) && (flag_tol ~= 1) && (flag_tol ~= 2)
     fprintf('The value of flag_tol must be 0, 1 or 2 !');
@@ -48,7 +51,6 @@ if flag_tol == 1
         end
     end
 end
-
 lenalp = length(alpha_vec);
 lenprob = length(Prob);
 result = zeros(lenalp*lenprob,11);
@@ -78,11 +80,14 @@ for pp = 1:lenprob
     OPTIONS.tol = tol;
     OPTIONS.m = m;
     OPTIONS.n = n;
+    OPTIONS.maxiter = 200;
     OPTIONS.sigmascale = 1.3;
     OPTIONS.tauscale = 1.2;
     OPTIONS.flag_tol = flag_tol;
     lamb = 0.12;
     
+    eval(['result_',num2str(m),'_',num2str(n),'_','J = zeros(',num2str(lenalp),...
+        ',',num2str(OPTIONS.maxiter),');']);
     for jj = 1:lenalp
         alpha = alpha_vec(jj);
         if flag_tol == 1
@@ -105,7 +110,7 @@ for pp = 1:lenprob
         OPTIONS.sigma = 20/OPTIONS.lambda;
         OPTIONS.tau = 20/OPTIONS.lambda;
         
-        [obj,~,~,~,runhist,info] = NALM(A,b,OPTIONS);
+        [obj,~,~,~,runhist,info] = NALM_new(A,b,OPTIONS);
         
         result(jj+(pp-1)*lenalp,1) = OPTIONS.m;
         result(jj+(pp-1)*lenalp,2) = OPTIONS.n;
@@ -121,10 +126,18 @@ for pp = 1:lenprob
         if OPTIONS.flag_tol == 1
             result(jj+(pp-1)*lenalp,12) = info.relobj;
         end
+        
+        if flag_J == 1
+            iter = info.iter; r_indexJ_vec = runhist.r_indexJ;
+            eval(['result_',num2str(m),'_',num2str(n),'_J(',num2str(jj),',1:',...
+                num2str(iter),') = runhist.r_indexJ;']);
+        end
     end
+    eval(['save result_',num2str(m),'_',num2str(n),'_J.mat result_',num2str(m),'_',num2str(n),'_J']);
 end
 
-eval(['save Result_NALM_random_flagtol_',num2str(flag_tol),'_tol_',num2str(tol),'.mat result']);
+eval(['save Result_NALM_random_flagtol_',num2str(flag_tol),'_tol_',num2str(tol),...
+    '_flagJ_',num2str(flag_J),'.mat result']); 
 
 %profile viewer
 
