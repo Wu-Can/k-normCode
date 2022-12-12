@@ -44,10 +44,12 @@ set(gca, 'xTick', [iter_0:1:iter_1]);
 set(gca, 'xTickLabel', [iter_0:1:iter_1]);
 set(gca, 'FontSize', 15);
 
-% maxs = 2050;
-% set(gca, 'yTick', [0:250:maxs]);
-% set(gca, 'yTickLabel', [0:250:maxs]);
-% set(gca, 'FontSize', 15);
-% xlim([iter_0,iter_1]);
-% ylim([0,2050]);
+maxs = 2050;
+set(gca, 'yTick', [0:250:maxs]);
+set(gca, 'yTickLabel', [0:250:maxs]);
+set(gca, 'FontSize', 15);
+xlim([iter_0,iter_1]);
+ylim([0,2050]);
+
+saveas(gcf,'Figure_s_indexJ.png')
 

@@ -10,14 +10,14 @@
 %% flag_J = 1, test the influence of the parameter k on the cardinality s of
 %%             the index set J 
 %%==============================================================================================
-clear all; clc;
+%clear all; clc;
 rng('default');
 HOME = pwd;
 addpath(genpath(HOME));
 %%
 %profile on
 %================================== Input =================================
-Prob = 1;%[5:7];
+Prob = 7;%[5:7];
 flag_tol = 0;
 tol = 1e-6; 
 alpha_vec = [0.4:-0.1:0.1];%[0.9;0.5;0.1]; 
