@@ -110,7 +110,7 @@ for pp = 1:lenprob
         OPTIONS.sigma = 20/OPTIONS.lambda;
         OPTIONS.tau = 20/OPTIONS.lambda;
         
-        [obj,~,~,~,runhist,info] = NALM_new(A,b,OPTIONS);
+        [obj,~,~,~,runhist,info] = NALM(A,b,OPTIONS);
         
         result(jj+(pp-1)*lenalp,1) = OPTIONS.m;
         result(jj+(pp-1)*lenalp,2) = OPTIONS.n;
