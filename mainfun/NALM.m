@@ -206,6 +206,7 @@ for iter = 1:maxiter
     dualfeas_sub = dualfeas; primfeas_sub = primfeas;
     cntAmap_sub = 0; cntATmap_sub = 0;
     ATu_snew = ATu;
+    subhist.r_indexJ = [];
     for itersub = 1:maxitersub
         break_ok = 0;
         %% Stopping criterion: (A) and (B)
@@ -467,6 +468,7 @@ for iter = 1:maxiter
         
     end
     %% End SSN
+    runhist.r_indexJ= (subhist.r_indexJ);
     par.AJ = parsub.AJ; par.AJTAJ = parsub.AJTAJ; par.indexJ = parsub.indexJ;
     par.num_T = parsub.num_T; ATu = ATu_snew;
     if break_ok  < 0
