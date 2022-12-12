@@ -468,7 +468,7 @@ for iter = 1:maxiter
         
     end
     %% End SSN
-    runhist.r_indexJ= (subhist.r_indexJ);
+    runhist.r_indexJ(iter)= mean(subhist.r_indexJ);
     par.AJ = parsub.AJ; par.AJTAJ = parsub.AJTAJ; par.indexJ = parsub.indexJ;
     par.num_T = parsub.num_T; ATu = ATu_snew;
     if break_ok  < 0
