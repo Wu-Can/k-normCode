@@ -48,7 +48,7 @@ printyes = 1; % print in AS
 print_yes = 0; % print in the outer ALM for N-ALM
 print_level = 0; % print in the inner SSN for N-ALM
 flag_tol = 2; % adopt relkkt < tol as the stopping criterion of the N-ALM
-Test_stepALM = 0; % print the muber of iterations of N-ALM
+Test_stepALM = 1; % print the muber of iterations of N-ALM
 
 if isfield(OPTIONS,'tol'), tol = OPTIONS.tol; end
 if isfield(OPTIONS,'kk'), kk = OPTIONS.kk; end

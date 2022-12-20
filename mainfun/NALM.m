@@ -4,7 +4,7 @@
 %% the convex CVaR-based sparse linear regression:
 %%
 %% (P)   minimize_{x in R^n} {||A*x - b||_(k) + lambda ||x||_1}
-%% 
+%%
 %% (D)   maximize_{u in R^m}         -<u,b>
 %%       subject to         ||A^T*u||_{infty} <= lambda,
 %%                                ||u||_(k)^* <= 1}.
@@ -23,7 +23,7 @@
 %% OPTIONS.tau = the initial value of tau in the proximal ALM;
 %% OPTIONS.sigmascale = the positive number for updating sigma;
 %% OPTIONS.tauscale = the positive number for updating tau;
-%% OPTIONS.flag_tol = 0, adopt eta_res < tol as the stopping criterion of the N-ALM.                         
+%% OPTIONS.flag_tol = 0, adopt eta_res < tol as the stopping criterion of the N-ALM.
 %%                  = 1, adopt  relobj < tol as the stopping criterion of the N-ALM;
 %%                  = 2, adopt  relkkt < tol as the stopping criterion of the N-ALM.
 %% Output:
@@ -255,7 +255,7 @@ for iter = 1:maxiter
                 linsolver = 'd_direct';
             end
         end
-        if ((r_indexJ <= m) && (r_indexJ <= upnumber)) 
+        if ((r_indexJ <= m) && (r_indexJ <= upnumber))
             linsolver = 'p_direct';
         end
         if (m > 5e3 && r_indexJ >= 3000) || (m > 2000 && r_indexJ > 8000) || (m > 100 && r_indexJ > 1e4)
@@ -281,7 +281,7 @@ for iter = 1:maxiter
             if (dualfeas_sub > 1e-4)
                 stagnate_check_psqmr = max(stagnate_check_psqmr,20);
             else
-                stagnate_check_psqmr = max(stagnate_check_psqmr,60); 
+                stagnate_check_psqmr = max(stagnate_check_psqmr,60);
             end
             if (itersub > 3) && (dualfeas_sub < 5e-5) && (length(subhist.solve_ok)>=3)
                 if all(subhist.solve_ok(itersub-(1:3)) <= -1)
@@ -425,7 +425,7 @@ for iter = 1:maxiter
                 if (printsub); fprintf(' $$'); end
                 break_ok = 4;
             end
-           
+            
         end
         %% Print results of SSN
         if (itersub <= 10)
@@ -450,10 +450,10 @@ for iter = 1:maxiter
             %------------test----------------------------------------------
             fprintf(' [%3.0f %3.0f %3.0f %3.0f] ', parsub.r_indexJ,...
                 parsub.index_alpha,parsub.index_beta,parsub.index_gamma);
-%             if itersub > 1
-%                 delphi = runhist.phi(itersub)-runhist.phi(itersub-1);
-%                 fprintf(' delphi=%3.2e ', delphi);
-%             end
+            %             if itersub > 1
+            %                 delphi = runhist.phi(itersub)-runhist.phi(itersub-1);
+            %                 fprintf(' delphi=%3.2e ', delphi);
+            %             end
             %-----------end------------------------------------------------
             if strcmp(linsolver,'d_pcg') && ~(parsub.r_indexJ==0)
                 fprintf('[%3.1e %3.1e %3.0d]',tolpsqmr,resnrm(end),psqmriter);
@@ -480,8 +480,8 @@ for iter = 1:maxiter
     u_new = u_snew;
     x_new = x_snew;
     z_new = z_snew;
-    ATu_new = ATu_snew; 
-    primfeas = primfeas_sub; 
+    ATu_new = ATu_snew;
+    primfeas = primfeas_sub;
     dualfeas = dualfeas_sub;
     Axb_new = Axb_sub;
     %% Stopping criterion: relative duality gap
@@ -540,7 +540,7 @@ for iter = 1:maxiter
     end
     ttime = etime(clock,tstart);
     runhist.ttime(iter) = ttime;
-    if (rem(iter,print_iter)==0 || iter==maxiter) || (breakyes==1) || (ttime > maxtime)     
+    if (rem(iter,print_iter)==0 || iter==maxiter) || (breakyes==1) || (ttime > maxtime)
         if (printyes)
             fprintf('\n %5.0d|  %3.2e    %3.2e   %- 3.2e| %- 5.4e %- 5.4e |',...
                 iter,primfeas,dualfeas,res_gap,primobj,dualobj);
@@ -561,14 +561,16 @@ for iter = 1:maxiter
     subinfo.cntATmap(iter) = cntATmap_sub; % the same as numSSN
     %% termination
     if (breakyes > 0) || (ttime > maxtime) || (iter == maxiter)
-        fprintf('\n  breakyes = %3.1f, %s,',breakyes,msg);
-        switch(flag_tol)
-            case 0
-                fprintf(' eta_res = %3.2e',eta_res);
-            case 1
-                fprintf(' relobj = %3.2e',relobj);
-            case 2
-                fprintf(' relkkt = %3.2e',res_kkt);
+        if (printyes)
+            fprintf('\n  breakyes = %3.1f, %s,',breakyes,msg);
+            switch(flag_tol)
+                case 0
+                    fprintf(' eta_res = %3.2e',eta_res);
+                case 1
+                    fprintf(' relobj = %3.2e',relobj);
+                case 2
+                    fprintf(' relkkt = %3.2e',res_kkt);
+            end
         end
         x = x_new; z = z_new; u = u_new;
         break;
