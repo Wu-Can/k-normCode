@@ -44,8 +44,7 @@ errors according to Table 1 or three different contamination schemes in Table 3 
 - `mexfun`: two funtions in MEX format.
 - `solver`: all the subfunctions called by the above main functions.
 - `UCIdata`: all availiable data for the UCI data and the high-accurate objective values.
-- `Example`: the running diaries and final results of the **N-ALM** and **Gurobi** for solving the CVaR regression with a fixed lambda on UCI data with epsilon=1e-8.
-
+- `Results`: all the numerical results and their corresponding running records of Tables 2-6 and Figures 1-2 in the paper.
 
 ## Usage
 
@@ -276,8 +275,7 @@ If you want to see the performance of the **N-ALM** and **Gurobi** on UCI data w
   ```
 	then run this script.
 	
-During the above two operations, you will see the information for each iteration of the **N-ALM** and **Gurobi** in the current command window (see Diary_NALM_UCI_flagtol_0_tol_1e-08.txt and Diary_Barrier_Gurobi_UCI.txt in `Example` folder), respectively. Finally, you will obtain the files Result_NALM_UCI_flagtol_0_tol_1e-08.mat and Result_Gurobi_UCI.mat in the current folder, which include all the information required in Table 4.
-	
+During the above two operations, you will see the information for each iteration of the **N-ALM** and **Gurobi** in the current command window (see Diary_NALM_UCI_flagtol_0_tol_1e-08.txt and Diary_Barrier_Gurobi_UCI.txt in `\Results\Result_Table4` folder), respectively. Finally, you will obtain the files Result_NALM_UCI_flagtol_0_tol_1e-08.mat and Result_Gurobi_UCI.mat in the current folder (see these two files in`\Results\Result_Table4` folder), which include all the information required in Table 4.
 
 ## Replicating
 - To replicate all the results on UCI data in the paper, modify and run the scripts in the corresponding folders `Test1_fixed_lambda`, `Test2_Solution_path` and `Test3_truncated_CVaR_MM` according to ***Step 4***, respectively. 
