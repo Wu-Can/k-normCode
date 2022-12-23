@@ -1,33 +1,3 @@
-[![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://pubsonline.informs.org/journal/ijoc)
-
-# Convex and Nonconvex Risk-based Linear Regression at Scale
-
-This archive is distributed in association with the [INFORMS Journal on
-Computing](https://pubsonline.informs.org/journal/ijoc) under the [General Public License v2.0](LICENSE).
-
-The software in this repository is a snapshot of the software that was used in the research reported 
-on in the paper [Convex and Nonconvex Risk-based Linear Regression at Scale](https://www.doi.org) by Can Wu, Ying Cui, Donghui Li and Defeng Sun.
-The snapshot corresponds to [this release](https://github.com/Wu-Can/k-normCode) in the development repository. 
-
-## Cite
-
-To cite this material, please cite this repository, using the following DOI.
-
-[![DOI](tbd)](tbd)
-
-Below is the BibTex for citing this version of the code.
-
-```
-@article{Risk202Xregression,
-  author =        {Can Wu, Ying Cui, Donghui Li and Defeng Sun},
-  publisher =     {INFORMS Journal on Computing},
-  title =         {Convex and Nonconvex Risk-based Linear Regression at Scale},
-  year =          {202X},
-  doi =           {TBD},
-  url =          {https://github.com/INFORMSJoC/2022.0012},
-}  
-```
-
 ## Description
 
 The goal of this software is to solve high-dimensional sparse linear regression problems 
